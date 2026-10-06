@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. Luis Khenyel Lebrón | Perfil Profesional & Hub de Ingeniería</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        accent: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & Lucide Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        .glow-effect {
+            box-shadow: 0 0 30px -5px rgba(2, 132, 199, 0.25);
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-500 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/20">
+                    <i data-lucide="cpu" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-slate-100 via-brand-100 to-brand-400 bg-clip-text text-transparent">Ing. Luis Khenyel Lebrón</span>
+                    <span class="hidden sm:inline-block text-xs text-brand-400 font-mono ml-2 border-l border-slate-700 pl-2">Ingeniería Mecánica & Matemáticas</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-medium">
+                <a href="#perfil" class="px-3 py-2 rounded-lg hover:bg-slate-800 transition text-slate-300 hover:text-brand-400">Perfil</a>
+                <a href="#calculadoras" class="px-3 py-2 rounded-lg hover:bg-slate-800 transition text-slate-300 hover:text-brand-400">Calculadoras</a>
+                <a href="#asistente" class="px-3 py-2 rounded-lg hover:bg-slate-800 transition text-slate-300 hover:text-brand-400">Asistente IA</a>
+                <a href="#ejercicios" class="px-3 py-2 rounded-lg hover:bg-slate-800 transition text-slate-300 hover:text-brand-400">Ejercicios Libro</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <a href="#asistente" class="inline-flex items-center space-x-2 bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white px-4 py-2 rounded-xl text-sm font-semibold shadow-md transition-all duration-200">
+                    <i data-lucide="bot" class="w-4 h-4"></i>
+                    <span>Consultar Bot</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+        <!-- HERO / PERFIL SECTION (WITHOUT PROFILE PICTURE) -->
+        <section id="perfil" class="relative rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900/90 to-brand-950/40 p-8 sm:p-12 lg:p-16 glow-effect">
+            <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-1/3 -mb-12 w-64 h-64 bg-accent-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="relative z-10 space-y-6 max-w-4xl">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-medium">
+                    <i data-lucide="award" class="w-3.5 h-3.5"></i>
+                    <span>Ing. Luis Khenyel Lebrón — Especialista en Ingeniería Mecánica & Análisis Matemático</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                    Optimización Mecánica, Termodinámica & <span class="bg-gradient-to-r from-brand-400 via-sky-300 to-accent-400 bg-clip-text text-transparent">Álgebra Aplicada</span>
+                </h1>
+
+                <p class="text-slate-300 text-base sm:text-xl font-normal leading-relaxed max-w-3xl">
+                    Bienvenido al portal del <strong class="text-white">Ing. Luis Khenyel Lebrón</strong>. Espacio dedicado a la resolución de problemas analíticos complejos, cálculos estructurales, diseño de transmisiones de potencia, balances energéticos y simplificación matemática mediante notación científica.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="mailto:luis.lebron.ing@example.com" class="inline-flex items-center space-x-2 bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 px-5 py-3 rounded-xl text-sm font-medium transition">
+                        <i data-lucide="mail" class="w-4 h-4 text-brand-400"></i>
+                        <span>Contacto Profesional</span>
+                    </a>
+                    <a href="#calculadoras" class="inline-flex items-center space-x-2 bg-brand-600 hover:bg-brand-500 text-white px-5 py-3 rounded-xl text-sm font-semibold transition shadow-lg">
+                        <i data-lucide="calculator" class="w-4 h-4"></i>
+                        <span>Ir a Calculadoras</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Skills Matrix Grid -->
+            <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="p-2 bg-brand-500/10 text-brand-400 rounded-lg"><i data-lucide="binary" class="w-5 h-5"></i></div>
+                        <h3 class="font-semibold text-white">Notación & Álgebra</h3>
+                    </div>
+                    <p class="text-xs text-slate-400">Manejo de potencias, notación científica ($10^{-12}$ a $10^{12}$) y simplificación de expresiones algebráicas.</p>
+                </div>
+
+                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg"><i data-lucide="flame" class="w-5 h-5"></i></div>
+                        <h3 class="font-semibold text-white">Termodinámica</h3>
+                    </div>
+                    <p class="text-xs text-slate-400">Balances de masa y energía ($\Delta U = Q - W$), procesos térmicos y transferencia de calor.</p>
+                </div>
+
+                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg"><i data-lucide="activity" class="w-5 h-5"></i></div>
+                        <h3 class="font-semibold text-white">Resistencia de Materiales</h3>
+                    </div>
+                    <p class="text-xs text-slate-400">Esfuerzo normal ($\sigma = F/A$), deflexión, corte y análisis de deformaciones estructurales.</p>
+                </div>
+
+                <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <div class="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg"><i data-lucide="rotate-cw" class="w-5 h-5"></i></div>
+                        <h3 class="font-semibold text-white">Potencia y Torque</h3>
+                    </div>
+                    <p class="text-xs text-slate-400">Diseño de ejes de transmisión, torque rotacional ($\tau = F \cdot d \cdot \sin\theta$) y velocidad angular.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALCULATOR SUITE SECTION -->
+        <section id="calculadoras" class="space-y-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-2">
+                        <i data-lucide="calculator" class="w-7 h-7 text-brand-400"></i>
+                        <span>Suite de Calculadoras de Ingeniería Mecánica</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-1">Herramientas interactivas creadas para cálculo instantáneo y validación técnica.</p>
+                </div>
+
+                <!-- Calculator Selector Tabs -->
+                <div class="flex flex-wrap gap-2 bg-slate-900 p-1.5 rounded-2xl border border-slate-800 text-xs font-medium">
+                    <button onclick="switchCalc('notacion')" id="tab-notacion" class="calc-tab px-3.5 py-2 rounded-xl bg-brand-600 text-white font-semibold transition">Notación Científica</button>
+                    <button onclick="switchCalc('torque')" id="tab-torque" class="calc-tab px-3.5 py-2 rounded-xl text-slate-400 hover:text-white transition">Torque ($\tau$)</button>
+                    <button onclick="switchCalc('esfuerzo')" id="tab-esfuerzo" class="calc-tab px-3.5 py-2 rounded-xl text-slate-400 hover:text-white transition">Esfuerzo ($\sigma$)</button>
+                    <button onclick="switchCalc('potencia')" id="tab-potencia" class="calc-tab px-3.5 py-2 rounded-xl text-slate-400 hover:text-white transition">Potencia Rotacional</button>
+                    <button onclick="switchCalc('termo')" id="tab-termo" class="calc-tab px-3.5 py-2 rounded-xl text-slate-400 hover:text-white transition">1ª Ley Termo</button>
+                </div>
+            </div>
+
+            <!-- CALCULATOR PANELS CONTAINER -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8">
+
+                <!-- 1. NOTACIÓN CIENTÍFICA -->
+                <div id="calc-notacion" class="calc-panel space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i data-lucide="binary" class="w-5 h-5 text-brand-400"></i>
+                            Conversor de Notación Científica
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Convierte números estándar a notación científica garantizando $1 \le |a| < 10$.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Ingresa el valor numérico (Ej: 3100000000000 o 0.000013):</label>
+                                <input type="text" id="sci-input" value="3100000000000" oninput="calculateSci()" 
+                                       class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm focus:outline-none focus:border-brand-500">
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button onclick="setSciExample(3100000000000)" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700">Presupuesto ($3.1 \times 10^{12}$)</button>
+                                <button onclick="setSciExample(0.000013)" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-lg border border-slate-700">Micro ($1.3 \times 10^{-5}$)</button>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 flex flex-col justify-center space-y-3">
+                            <div class="text-xs text-slate-400 font-mono">RESULTADO EN NOTACIÓN CIENTÍFICA:</div>
+                            <div id="sci-output" class="text-2xl font-extrabold font-mono text-brand-400">3.1 × 10¹²</div>
+                            <div id="sci-valid" class="text-xs text-emerald-400 flex items-center gap-1">
+                                <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Válido: $1 \le |a| < 10$
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. CALCULADORA TORQUE -->
+                <div id="calc-torque" class="calc-panel hidden space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i data-lucide="rotate-cw" class="w-5 h-5 text-brand-400"></i>
+                            Cálculo de Torque ($\tau = F \cdot d \cdot \sin\theta$)
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Determina el momento o par producido alrededor de un eje.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Fuerza $F$ (N):</label>
+                            <input type="number" id="t-force" value="250" oninput="calculateTorque()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Distancia / Brazo $d$ (m):</label>
+                            <input type="number" id="t-dist" value="0.8" step="0.1" oninput="calculateTorque()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Ángulo de Aplicación $\theta$ (°):</label>
+                            <input type="number" id="t-angle" value="90" oninput="calculateTorque()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm focus:border-brand-500">
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div>
+                            <div class="text-xs text-slate-400">TORQUE RESULTANTE ($\tau$):</div>
+                            <div id="torque-res" class="text-3xl font-extrabold font-mono text-brand-400 mt-1">200.00 N·m</div>
+                        </div>
+                        <div class="text-right text-xs text-slate-400 font-mono">
+                            Fórmula: $\tau = F \cdot d \cdot \sin(\theta)$
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. ESFUERZO NORMAL -->
+                <div id="calc-esfuerzo" class="calc-panel hidden space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i data-lucide="arrow-down-to-line" class="w-5 h-5 text-brand-400"></i>
+                            Cálculo de Esfuerzo Normal ($\sigma = F / A$)
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Calcula la intensidad de fuerza perpendicular por unidad de área.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Fuerza Axial $F$ (N):</label>
+                            <input type="number" id="s-force" value="15000" oninput="calculateStress()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Geometría de Sección:</label>
+                            <select id="s-type" onchange="calculateStress()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 text-sm">
+                                <option value="circle">Circular (Diámetro en mm)</option>
+                                <option value="rect">Rectangular (Base x Altura mm)</option>
+                                <option value="direct">Área Directa ($mm^2$)</option>
+                            </select>
+                        </div>
+                        <div id="s-param-container">
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Diámetro $d$ (mm):</label>
+                            <input type="number" id="s-param1" value="20" oninput="calculateStress()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm">
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <div class="text-xs text-slate-400">ESFUERZO NORMAL ($\sigma$):</div>
+                            <div id="stress-res" class="text-3xl font-extrabold font-mono text-brand-400 mt-1">47.75 MPa</div>
+                        </div>
+                        <div class="text-left sm:text-right text-xs text-slate-400">
+                            <div>Área Transversal: <span id="stress-area" class="font-mono text-slate-200">314.16 mm²</span></div>
+                            <div class="mt-1">Equivalente: <span id="stress-psi" class="font-mono text-indigo-300">6925.5 PSI</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. POTENCIA ROTACIONAL -->
+                <div id="calc-potencia" class="calc-panel hidden space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i data-lucide="zap" class="w-5 h-5 text-brand-400"></i>
+                            Potencia Rotacional ($P = \tau \cdot \omega$)
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Calcula la potencia transmitida por ejes mecánicos giratorios.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Torque $\tau$ (N·m):</label>
+                            <input type="number" id="p-torque" value="120" oninput="calculatePower()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Velocidad Angular (RPM):</label>
+                            <input type="number" id="p-rpm" value="1750" oninput="calculatePower()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm">
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <div class="text-xs text-slate-400">POTENCIA CALCULADA (kW):</div>
+                            <div id="power-kw" class="text-3xl font-extrabold font-mono text-brand-400 mt-1">21.99 kW</div>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <div class="text-xs text-slate-400">CABALLOS DE FUERZA (HP):</div>
+                            <div id="power-hp" class="text-3xl font-extrabold font-mono text-accent-400 mt-1">29.49 HP</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. TERMODINÁMICA -->
+                <div id="calc-termo" class="calc-panel hidden space-y-6">
+                    <div class="border-b border-slate-800 pb-4">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i data-lucide="flame" class="w-5 h-5 text-brand-400"></i>
+                            Primera Ley de la Termodinámica ($\Delta U = Q - W$)
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Cálculo del cambio en energía interna de un sistema cerrado.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Calor Transferido $Q$ (Joules):</label>
+                            <input type="number" id="t-heat" value="500" oninput="calculateThermo()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Trabajo Realizado $W$ (Joules):</label>
+                            <input type="number" id="t-work" value="180" oninput="calculateThermo()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm">
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <div>
+                            <div class="text-xs text-slate-400">CAMBIO EN ENERGÍA INTERNA ($\Delta U$):</div>
+                            <div id="thermo-res" class="text-3xl font-extrabold font-mono text-brand-400 mt-1">320.00 J</div>
+                        </div>
+                        <div id="thermo-desc" class="text-xs text-slate-300 bg-slate-900 p-3 rounded-xl border border-slate-800 max-w-xs">
+                            El sistema absorbe calor y realiza trabajo sobre el entorno.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ASISTENTE DE INGENIERÍA CHATBOT -->
+        <section id="asistente" class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-2">
+                        <i data-lucide="bot" class="w-7 h-7 text-accent-400"></i>
+                        <span>Asistente Virtual de Ingeniería Mecánica</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-1">Consulta tus dudas sobre torque, esfuerzos, termodinámica o notación científica con el asistente del Ing. Luis Khenyel Lebrón.</p>
+                </div>
+            </div>
+
+            <!-- CHAT WRAPPER -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden flex flex-col h-[520px]">
+                
+                <!-- Quick Suggestion Chips -->
+                <div class="p-3 bg-slate-950 border-b border-slate-800 flex items-center gap-2 overflow-x-auto text-xs">
+                    <span class="text-slate-400 font-medium whitespace-nowrap pl-2">Sugerencias:</span>
+                    <button onclick="sendQuickQuery('¿Cómo calculo el esfuerzo normal?')" class="whitespace-nowrap bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-1.5 rounded-full transition">¿Cómo calculo el esfuerzo normal?</button>
+                    <button onclick="sendQuickQuery('Explicación de la primera ley de la termodinámica')" class="whitespace-nowrap bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-1.5 rounded-full transition">Primera ley de Termodinámica</button>
+                    <button onclick="sendQuickQuery('¿Qué es el torque y cuál es su fórmula?')" class="whitespace-nowrap bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-1.5 rounded-full transition">Fórmula del torque</button>
+                    <button onclick="sendQuickQuery('¿Reglas para notación científica válida?')" class="whitespace-nowrap bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-3 py-1.5 rounded-full transition">Reglas Notación Científica</button>
+                </div>
+
+                <!-- Chat Scroll Log -->
+                <div id="chat-messages" class="flex-grow p-4 sm:p-6 overflow-y-auto space-y-4">
+                    <!-- Default Bot Greeting -->
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 rounded-xl bg-accent-600 flex items-center justify-center text-white shrink-0 shadow-md">
+                            <i data-lucide="bot" class="w-4 h-4"></i>
+                        </div>
+                        <div class="bg-slate-800 border border-slate-700 text-slate-200 p-4 rounded-2xl rounded-tl-none max-w-2xl text-sm leading-relaxed space-y-2">
+                            <p class="font-semibold text-accent-300">¡Saludos! Soy el asistente virtual del Ing. Luis Khenyel Lebrón.</p>
+                            <p>Puedo responder tus preguntas sobre mecánica de sólidos, termodinámica, notación científica, cálculos de torque o el solucionario de ejercicios. ¿En qué puedo asistirte hoy?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Controls -->
+                <div class="p-3 sm:p-4 bg-slate-950 border-t border-slate-800">
+                    <form onsubmit="handleChatSubmit(event)" class="flex items-center gap-2">
+                        <input type="text" id="chat-input" placeholder="Escribe tu consulta técnica (ej: '¿Cuál es la fórmula del esfuerzo normal?')..." 
+                               class="flex-grow bg-slate-900 border border-slate-700 rounded-2xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-accent-500">
+                        <button type="submit" class="bg-gradient-to-r from-accent-600 to-brand-600 hover:from-accent-500 hover:to-brand-500 text-white p-3 rounded-2xl transition shadow-lg shrink-0">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- EJERCICIOS DEL LIBRO INTERACTIVOS (68 a 84) -->
+        <section id="ejercicios" class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-2">
+                        <i data-lucide="book-open" class="w-7 h-7 text-emerald-400"></i>
+                        <span>Solucionario de Ejercicios (#68 al #84)</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-1">Soluciones detalladas paso a paso del libro de álgebra y notación científica.</p>
+                </div>
+
+                <!-- Exercise Filters -->
+                <div class="flex gap-2 bg-slate-900 p-1.5 rounded-2xl border border-slate-800 text-xs">
+                    <button onclick="filterExercises('all')" class="ex-filter px-3 py-1.5 rounded-xl bg-slate-800 text-white font-semibold">Todos</button>
+                    <button onclick="filterExercises('notacion')" class="ex-filter px-3 py-1.5 rounded-xl text-slate-400 hover:text-white">Notación</button>
+                    <button onclick="filterExercises('operaciones')" class="ex-filter px-3 py-1.5 rounded-xl text-slate-400 hover:text-white">Operaciones (77-82)</button>
+                    <button onclick="filterExercises('aplicados')" class="ex-filter px-3 py-1.5 rounded-xl text-slate-400 hover:text-white">Aplicados (83-84)</button>
+                </div>
+            </div>
+
+            <!-- Exercises Grid Container -->
+            <div id="exercises-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Populated dynamically via JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                © 2026 Ing. Luis Khenyel Lebrón — Perfil Profesional & Asistente de Ingeniería Mecánica.
+            </div>
+            <div class="flex space-x-4">
+                <a href="#perfil" class="hover:text-slate-300">Perfil</a>
+                <a href="#calculadoras" class="hover:text-slate-300">Calculadoras</a>
+                <a href="#asistente" class="hover:text-slate-300">Asistente Bot</a>
+                <a href="#ejercicios" class="hover:text-slate-300">Ejercicios 68-84</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT LOGIC -->
+    <script>
+        lucide.createIcons();
+
+        // ----------------------------------------------------
+        // 1. CALCULATOR LOGIC
+        // ----------------------------------------------------
+        function switchCalc(calcId) {
+            document.querySelectorAll('.calc-panel').forEach(p => p.classList.add('hidden'));
+            document.querySelectorAll('.calc-tab').forEach(t => {
+                t.classList.remove('bg-brand-600', 'text-white', 'font-semibold');
+                t.classList.add('text-slate-400');
+            });
+
+            document.getElementById(`calc-${calcId}`).classList.remove('hidden');
+            const activeTab = document.getElementById(`tab-${calcId}`);
+            activeTab.classList.add('bg-brand-600', 'text-white', 'font-semibold');
+            activeTab.classList.remove('text-slate-400');
+        }
+
+        // Scientific Notation
+        function calculateSci() {
+            const raw = document.getElementById('sci-input').value.trim();
+            const num = Number(raw);
+            const output = document.getElementById('sci-output');
+            const valid = document.getElementById('sci-valid');
+
+            if (isNaN(num) || raw === '') {
+                output.innerText = "Entrada Inválida";
+                valid.innerHTML = '<span class="text-rose-400">Ingresa un número válido.</span>';
+                return;
+            }
+
+            if (num === 0) {
+                output.innerText = "0 × 10⁰";
+                valid.innerHTML = '<span class="text-emerald-400">Cero exacto</span>';
+                return;
+            }
+
+            const exp = Math.floor(Math.log10(Math.abs(num)));
+            const coeff = (num / Math.pow(10, exp)).toFixed(4).replace(/\.?0+$/, '');
+            
+            output.innerText = `${coeff} × 10${toSuperscript(exp)}`;
+            valid.innerHTML = '<i data-lucide="check-circle" class="w-3.5 h-3.5 inline"></i> Válido: $1 \\le |a| < 10$';
+            lucide.createIcons();
+        }
+
+        function setSciExample(val) {
+            document.getElementById('sci-input').value = val;
+            calculateSci();
+        }
+
+        function toSuperscript(num) {
+            const map = { '-': '⁻', '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹' };
+            return String(num).split('').map(c => map[c] || c).join('');
+        }
+
+        // Torque
+        function calculateTorque() {
+            const f = parseFloat(document.getElementById('t-force').value) || 0;
+            const d = parseFloat(document.getElementById('t-dist').value) || 0;
+            const deg = parseFloat(document.getElementById('t-angle').value) || 0;
+            const rad = deg * (Math.PI / 180);
+            const torque = f * d * Math.sin(rad);
+            document.getElementById('torque-res').innerText = `${torque.toFixed(2)} N·m`;
+        }
+
+        // Stress
+        function calculateStress() {
+            const f = parseFloat(document.getElementById('s-force').value) || 0;
+            const type = document.getElementById('s-type').value;
+            const paramContainer = document.getElementById('s-param-container');
+            let area = 1;
+
+            if (type === 'circle') {
+                paramContainer.innerHTML = `
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Diámetro $d$ (mm):</label>
+                    <input type="number" id="s-param1" value="20" oninput="calculateStress()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm">
+                `;
+                const d = parseFloat(document.getElementById('s-param1').value) || 1;
+                area = Math.PI * Math.pow(d / 2, 2);
+            } else if (type === 'rect') {
+                paramContainer.innerHTML = `
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Base x Altura (mm):</label>
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="number" id="s-param1" value="15" oninput="calculateStress()" placeholder="b" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 font-mono text-xs">
+                        <input type="number" id="s-param2" value="20" oninput="calculateStress()" placeholder="h" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-100 font-mono text-xs">
+                    </div>
+                `;
+                const b = parseFloat(document.getElementById('s-param1').value) || 1;
+                const h = parseFloat(document.getElementById('s-param2') ? document.getElementById('s-param2').value : 1) || 1;
+                area = b * h;
+            } else {
+                paramContainer.innerHTML = `
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Área Directa ($mm^2$):</label>
+                    <input type="number" id="s-param1" value="300" oninput="calculateStress()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-slate-100 font-mono text-sm">
+                `;
+                area = parseFloat(document.getElementById('s-param1').value) || 1;
+            }
+
+            const stressMpa = f / area;
+            const stressPsi = stressMpa * 145.038;
+
+            document.getElementById('stress-res').innerText = `${stressMpa.toFixed(2)} MPa`;
+            document.getElementById('stress-area').innerText = `${area.toFixed(2)} mm²`;
+            document.getElementById('stress-psi').innerText = `${stressPsi.toFixed(1)} PSI`;
+        }
+
+        // Power
+        function calculatePower() {
+            const t = parseFloat(document.getElementById('p-torque').value) || 0;
+            const rpm = parseFloat(document.getElementById('p-rpm').value) || 0;
+            const w = rpm * (2 * Math.PI / 60);
+            const pWatts = t * w;
+            const pKw = pWatts / 1000;
+            const pHp = pKw * 1.34102;
+
+            document.getElementById('power-kw').innerText = `${pKw.toFixed(2)} kW`;
+            document.getElementById('power-hp').innerText = `${pHp.toFixed(2)} HP`;
+        }
+
+        // Thermo
+        function calculateThermo() {
+            const q = parseFloat(document.getElementById('t-heat').value) || 0;
+            const w = parseFloat(document.getElementById('t-work').value) || 0;
+            const du = q - w;
+
+            document.getElementById('thermo-res').innerText = `${du.toFixed(2)} J`;
+            const desc = document.getElementById('thermo-desc');
+
+            if (du > 0) {
+                desc.innerText = "La energía interna del sistema aumenta (absorción de calor mayor que el trabajo producido).";
+            } else if (du < 0) {
+                desc.innerText = "La energía interna disminuye (el sistema realiza más trabajo que el calor absorbido).";
+            } else {
+                desc.innerText = "Energía interna constante (proceso isoenergético).";
+            }
+        }
+
+        // ----------------------------------------------------
+        // 2. CHATBOT ASSISTANT LOGIC
+        // ----------------------------------------------------
+        const knowledgeBase = [
+            {
+                keys: ['esfuerzo', 'stress', 'normal', 'fuerza', 'area'],
+                reply: `El **Esfuerzo Normal ($\\sigma$)** es la fuerza perpendicular por unidad de área transversal:\n\n$$\\sigma = \\frac{F}{A}$$\n\n• Unidades: Megapascales ($\\text{MPa} = \\text{N/mm}^2$) o PSI.\n• Se clasifica en tracción (tensión) o compresión.`
+            },
+            {
+                keys: ['torque', 'par', 'momento', 'giro'],
+                reply: `El **Torque ($\\tau$)** cuantifica la tendencia de una fuerza a rotar un cuerpo alrededor de un eje:\n\n$$\\tau = F \\cdot d \\cdot \\sin(\\theta)$$\n\n• $F$: Fuerza en Newtons (N).\n• $d$: Distancia de palanca (m).\n• $\\theta$: Ángulo de aplicación.`
+            },
+            {
+                keys: ['termodinamica', 'primera ley', 'calor', 'trabajo', 'energia'],
+                reply: `La **Primera Ley de la Termodinámica** es el principio de conservación de la energía:\n\n$$\\Delta U = Q - W$$\n\n• $\\Delta U$: Variación de energía interna.\n• $Q$: Calor suministrado (+ al entrar).\n• $W$: Trabajo mecánico realizado por el sistema.`
+            },
+            {
+                keys: ['notacion', 'cientifica', 'exponente', 'regla'],
+                reply: `La **Notación Científica** representa números en la forma $a \\times 10^n$, donde se exige estricta cumplimiento de:\n\n$$1 \\le |a| < 10$$\n\nEjemplo: $14 \\times 10^{-5}$ es **incorrecto**, la forma correcta es $1.4 \\times 10^{-4}$.`
+            }
+        ];
+
+        function handleChatSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            appendUserMessage(text);
+            input.value = '';
+            processBotReply(text);
+        }
+
+        function sendQuickQuery(query) {
+            appendUserMessage(query);
+            processBotReply(query);
+        }
+
+        function appendUserMessage(msg) {
+            const chatLog = document.getElementById('chat-messages');
+            const div = document.createElement('div');
+            div.className = 'flex items-start justify-end space-x-3';
+            div.innerHTML = `
+                <div class="bg-brand-600 text-white p-3.5 rounded-2xl rounded-tr-none max-w-xl text-sm shadow-md">
+                    ${escapeHtml(msg)}
+                </div>
+                <div class="w-8 h-8 rounded-xl bg-slate-800 flex items-center justify-center text-slate-300 shrink-0">
+                    <i data-lucide="user" class="w-4 h-4"></i>
+                </div>
+            `;
+            chatLog.appendChild(div);
+            chatLog.scrollTop = chatLog.scrollHeight;
+            lucide.createIcons();
+        }
+
+        function processBotReply(userQuery) {
+            const chatLog = document.getElementById('chat-messages');
+            const q = userQuery.toLowerCase();
+
+            let matched = knowledgeBase.find(kb => kb.keys.some(k => q.includes(k)));
+            let responseText = matched ? matched.reply : 
+                `He recibido tu consulta sobre **"${escapeHtml(userQuery)}"**. Para este análisis conceptual, te sugiero consultar las calculadoras interactivas de torque, esfuerzo o notación científica disponibles en este portal del Ing. Luis Khenyel Lebrón.`;
+
+            setTimeout(() => {
+                const div = document.createElement('div');
+                div.className = 'flex items-start space-x-3';
+                div.innerHTML = `
+                    <div class="w-8 h-8 rounded-xl bg-accent-600 flex items-center justify-center text-white shrink-0 shadow-md">
+                        <i data-lucide="bot" class="w-4 h-4"></i>
+                    </div>
+                    <div class="bg-slate-800 border border-slate-700 text-slate-200 p-4 rounded-2xl rounded-tl-none max-w-2xl text-sm leading-relaxed space-y-2">
+                        ${responseText.replace(/\n/g, '<br>')}
+                    </div>
+                `;
+                chatLog.appendChild(div);
+                chatLog.scrollTop = chatLog.scrollHeight;
+                lucide.createIcons();
+            }, 300);
+        }
+
+        function escapeHtml(text) {
+            return text.replace(/[&<>"']/g, function(m) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+            });
+        }
+
+        // ----------------------------------------------------
+        // 3. BOOK EXERCISES DATABASE (68 to 84)
+        // ----------------------------------------------------
+        const exercisesData = [
+            {
+                num: 68,
+                cat: 'notacion',
+                title: '¿Cuál expresión no está en notación científica?',
+                options: ['A. 6.02 × 10²³', 'B. 14 × 10⁻⁵', 'C. 1.4 × 10⁻⁵', 'D. 3.8 × 10³'],
+                correct: 'B',
+                solution: 'Respuesta B: En notación científica $a \\times 10^n$, la mantisa $a$ debe cumplir $1 \\le |a| < 10$. El número 14 no cumple este rango.'
+            },
+            { num: 69, cat: 'notacion', title: 'Convertir a notación científica: 230', solution: '$230 = 2.3 \\times 10^2$' },
+            { num: 70, cat: 'notacion', title: 'Convertir a notación científica: 46,500', solution: '$46,500 = 4.65 \\times 10^4$' },
+            { num: 71, cat: 'notacion', title: 'Convertir a notación científica: 0.02', solution: '$0.02 = 2 \\times 10^{-2}$' },
+            { num: 72, cat: 'notacion', title: 'Convertir a notación científica: 0.0051', solution: '$0.0051 = 5.1 \\times 10^{-3}$' },
+            { num: 73, cat: 'notacion', title: 'Convertir a notación estándar: 6.5 × 10³', solution: '$6.5 \\times 10^3 = 6,500$' },
+            { num: 74, cat: 'notacion', title: 'Convertir a notación estándar: 2.317 × 10⁵', solution: '$2.317 \\times 10^5 = 231,700$' },
+            { num: 75, cat: 'notacion', title: 'Convertir a notación estándar: 1.52 × 10⁻²', solution: '$1.52 \\times 10^{-2} = 0.0152$' },
+            { num: 76, cat: 'notacion', title: 'Convertir a notación estándar: 1.63 × 10⁻⁴', solution: '$1.63 \\times 10^{-4} = 0.000163$' },
+            {
+                num: 77,
+                cat: 'operaciones',
+                title: 'Efectuar: (0.002 × 3900) / 0.000013',
+                solution: '$\\frac{(2 \\times 10^{-3}) \\times (3.9 \\times 10^3)}{1.3 \\times 10^{-5}} = \\frac{7.8 \\times 10^0}{1.3 \\times 10^{-5}} = 6 \\times 10^5$'
+            },
+            {
+                num: 78,
+                cat: 'operaciones',
+                title: 'Efectuar: (0.009 × 600) / 0.02',
+                solution: '$\\frac{(9 \\times 10^{-3}) \\times (6 \\times 10^2)}{2 \\times 10^{-2}} = \\frac{5.4 \\times 10^0}{2 \\times 10^{-2}} = 2.7 \\times 10^2$'
+            },
+            {
+                num: 79,
+                cat: 'operaciones',
+                title: 'Efectuar: (0.0004 × 56,000) / 0.000112',
+                solution: '$\\frac{(4 \\times 10^{-4}) \\times (5.6 \\times 10^4)}{1.12 \\times 10^{-4}} = \\frac{22.4}{1.12 \\times 10^{-4}} = 20 \\times 10^4 = 2 \\times 10^5$'
+            },
+            {
+                num: 80,
+                cat: 'operaciones',
+                title: 'Efectuar: (0.018 × 20,000) / (300 × 0.0004)',
+                solution: '$\\frac{360}{0.12} = 3000 = 3 \\times 10^3$'
+            },
+            {
+                num: 81,
+                cat: 'operaciones',
+                title: 'Efectuar: (840,000 × 0.03) / (0.00021 × 600)',
+                solution: '$\\frac{25,200}{0.126} = 200,000 = 2 \\times 10^5$'
+            },
+            {
+                num: 82,
+                cat: 'operaciones',
+                title: 'Efectuar: (28 × 0.0045) / (140 × 1500)',
+                solution: '$\\frac{0.126}{210,000} = 6 \\times 10^{-7}$'
+            },
+            {
+                num: 83,
+                cat: 'aplicados',
+                title: 'Presupuesto EE.UU. (Valores en Notación Científica)',
+                solution: '• $1,000,000,000 = 1 \\times 10^9$\n• $1,000,000,000,000 = 1 \\times 10^{12}$\n• $3,100,000,000,000 = 3.1 \\times 10^{12}$\n• $210,385 = 2.10385 \\times 10^5$'
+            },
+            {
+                num: 84,
+                cat: 'aplicados',
+                title: 'Área de Estados Unidos (Acres)',
+                solution: '• Alaska: $365,482,000 = 3.65482 \\times 10^8$\n• Rhode Island: $677,000 = 6.77 \\times 10^5$\n• Total EE.UU.: $2,271,343,000 = 2.271343 \\times 10^9$'
+            }
+        ];
+
+        function renderExercises(filter = 'all') {
+            const container = document.getElementById('exercises-container');
+            container.innerHTML = '';
+
+            const filtered = exercisesData.filter(item => filter === 'all' || item.cat === filter);
+
+            filtered.forEach(ex => {
+                const card = document.createElement('div');
+                card.className = 'bg-slate-900 border border-slate-800 rounded-2xl p-5 hover:border-slate-700 transition flex flex-col justify-between space-y-4';
+                
+                let contentHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-mono font-bold bg-brand-500/10 text-brand-400 border border-brand-500/20 px-2.5 py-1 rounded-lg">
+                                Ejercicio #${ex.num}
+                            </span>
+                            <span class="text-xs text-slate-500 capitalize">${ex.cat}</span>
+                        </div>
+                        <h4 class="font-semibold text-slate-100 text-sm">${ex.title}</h4>
+                `;
+
+                if (ex.options) {
+                    contentHTML += `<div class="mt-3 grid grid-cols-2 gap-2 text-xs font-mono text-slate-300">`;
+                    ex.options.forEach(opt => {
+                        const isCorrect = opt.startsWith(ex.correct);
+                        contentHTML += `<div class="p-2 bg-slate-950 rounded-lg border ${isCorrect ? 'border-emerald-500/40 text-emerald-300' : 'border-slate-800'}">${opt}</div>`;
+                    });
+                    contentHTML += `</div>`;
+                }
+
+                contentHTML += `
+                    </div>
+                    <div>
+                        <button onclick="toggleSolution(${ex.num})" class="w-full text-xs font-semibold text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 py-2 rounded-xl transition flex items-center justify-center gap-1.5">
+                            <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                            <span>Ver Solución Paso a Paso</span>
+                        </button>
+                        <div id="sol-${ex.num}" class="hidden mt-3 p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs font-mono text-emerald-400 leading-relaxed whitespace-pre-line">
+                            ${ex.solution}
+                        </div>
+                    </div>
+                `;
+
+                card.innerHTML = contentHTML;
+                container.appendChild(card);
+            });
+
+            lucide.createIcons();
+        }
+
+        function toggleSolution(num) {
+            const sol = document.getElementById(`sol-${num}`);
+            sol.classList.toggle('hidden');
+        }
+
+        function filterExercises(filter) {
+            document.querySelectorAll('.ex-filter').forEach(btn => {
+                btn.classList.remove('bg-slate-800', 'text-white', 'font-semibold');
+                btn.classList.add('text-slate-400');
+            });
+            event.target.classList.add('bg-slate-800', 'text-white', 'font-semibold');
+            event.target.classList.remove('text-slate-400');
+            renderExercises(filter);
+        }
+
+        window.onload = function() {
+            calculateSci();
+            calculateTorque();
+            calculateStress();
+            calculatePower();
+            calculateThermo();
+            renderExercises('all');
+        };
+    </script>
+</body>
+</html>
